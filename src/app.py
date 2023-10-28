@@ -4,10 +4,12 @@ from initializer import IncludeAPIRouter
 from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from utils.config_utils import get_common_config
+from utils.constant import *
 import logging
 
 config = get_common_config("./src/config/default.yml")
 api_config = config["api"]
+
 def get_application():
     _app = FastAPI(title=api_config['name'],
                    description=api_config['description'],

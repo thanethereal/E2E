@@ -6,3 +6,10 @@ api:
   debug_mode: "False"
   host: '0.0.0.0'
   port: 5000
+
+database:
+  user: vmthan
+  password: 123456
+  port: 5432
+  database_name: e2e-recommendation-system
+  host: 'localhost'

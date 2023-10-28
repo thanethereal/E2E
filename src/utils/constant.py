@@ -1,0 +1,1 @@
+FILE_CONFIG_DEFAULT = "./config/default.yml"

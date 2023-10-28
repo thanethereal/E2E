@@ -15,3 +15,27 @@ services:
     environment:
       ENV_STATE: dev #(dev or prod or stage or test)
       APP_HOME: ${app_home:-/app}
+      DATABASE_URL: postgresql://vmthan:123456@db:5432/e2e-recommendation-system
+    depends_on:
+      - db
+    networks:
+      - recommendation-network 
+
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data1/
+    environment:
+      - POSTGRES_USER=vmthan
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=e2e-recommendation-system
+    expose:                                                                                                                                         
+      - 5432
+    networks:
+      - recommendation-network 
+
+volumes:
+  postgres_data:
+
+networks:
+  recommendation-network:
