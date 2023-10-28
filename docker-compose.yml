@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  e2e-recommendation-system:
+    container_name: e2e-recommendation-system
+    build:
+      context: .
+      args:
+        ENV_STATE: dev #(dev or produ or stage or test)
+      dockerfile: Dockerfile
+    image: e2e-recommendation-system
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      ENV_STATE: dev #(dev or prod or stage or test)
+      APP_HOME: ${app_home:-/app}

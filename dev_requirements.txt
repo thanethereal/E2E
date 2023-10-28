@@ -1,0 +1,3 @@
+uvicorn
+fastapi
+dsc_labs

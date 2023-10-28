@@ -1,0 +1,8 @@
+api:
+  name: "E2E Recommendation system"
+  service_name: "E2E Recomendation system"
+  description: "Mention some high level description about API Functionality"
+  version: "0.0.1"
+  debug_mode: "False"
+  host: '0.0.0.0'
+  port: 5000
