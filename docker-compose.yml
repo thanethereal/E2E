@@ -24,7 +24,7 @@ services:
   db:
     image: postgres:15-alpine
     volumes:
-      - postgres_data:/var/lib/postgresql/data1/
+      - postgres_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=vmthan
       - POSTGRES_PASSWORD=123456
